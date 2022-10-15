@@ -1,0 +1,13 @@
+
+      <app-tete [titre]="name"></app-tete>
+
+<div class="container"  >
+      
+
+  <div class="row" >
+    <div class="col-lg-12" style="margin-bottom: 15%;" *ngFor="let t of matches" >
+<app-matche [t]="t" (sup)="update($event)"></app-matche>
+     
+    </div>
+  </div>
+</div>

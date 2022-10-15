@@ -1,0 +1,44 @@
+<div class="d-flex team-vs"  >
+    <span class="score">{{t.s1}}*{{t.s2}}</span>
+    <div class="team-1 w-50">
+      <div class="team-details w-100 text-center">
+        <img src="assets/images/logo_1.png" alt="Image" class="img-fluid">
+          <h3 ><div [ngClass]="{
+          'win':compare(t.s1,t.s2)[0]==='green',
+          'lost':compare(t.s1,t.s2)[0]==='red',
+          'tie':compare(t.s1,t.s2)[0]==='yellow'}
+          ">{{t.t1}} </div><span>({{compare(t.s1,t.s2)[1]}})</span>
+      </h3>
+    
+        <ul class="list-unstyled">
+          <li>Anja Landry (7)</li>
+          <li>Eadie Salinas (12)</li>
+          <li>Ashton Allen (10)</li>
+          <li>Baxter Metcalfe (5)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team-2 w-50">
+      <div class="team-details w-100 text-center">
+        <img src="assets/images/logo_2.png" alt="Image" class="img-fluid">
+        <h3 ><div [ngClass]="{
+          'win':compare(t.s2,t.s1)[0]==='green',
+          'lost':compare(t.s2,t.s1)[0]==='red',
+          'tie':compare(t.s2,t.s1)[0]==='yellow'}
+          ">{{t.t2}} </div>
+          <!-- <div *ngIf="t.s2>t.s1"> <span>(winner)</span></div>
+          <div *ngIf="t.s1>t.s2"><span>(loser)</span></div>
+          <div *ngIf="t.s1==t.s2"><span>(tie)</span></div> -->
+          <span  >
+          ({{compare(t.t1,t.t2)[1]}})</span>
+        </h3>
+        <ul class="list-unstyled">
+          <li>Macauly Green (3)</li>
+          <li>Arham Stark (8)</li>
+          <li>Stephan Murillo (9)</li>
+          <li>Ned Ritter (5)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-danger" (click)="delete(t.id)">delete</button>

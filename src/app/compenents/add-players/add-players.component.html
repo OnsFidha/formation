@@ -1,0 +1,44 @@
+ 
+      
+    <div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-9 mx-auto text-center">
+              <h1 class="text-white">add players</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="site-section">
+        <div class="container">
+            <div class="col-lg-11">
+              <form #form (ngSubmit)="addP()">
+                <div class="form-group">
+                  write player family name
+                    <input type="text" [(ngModel)]="players.nom" name="nom" class="form-control" >
+                    
+                  </div>
+                <div class="form-group">
+                  write player name
+                  <input type="text" [(ngModel)]="players.prenom" name="prenom" class="form-control" >
+                </div>
+                <div class="form-group">
+                  write player role
+                  <input type="text"  [(ngModel)]="players.role" name="role" class="form-control" >
+                </div>
+                <div class="form-group">
+                  write player number
+                  <input type="number" class="form-control" name="num" [(ngModel)]="players.num" >
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary py-3 px-5" value="add player">
+                </div>
+              </form>  
+            </div>
+        
+          </div>
+        </div>
+    
+  

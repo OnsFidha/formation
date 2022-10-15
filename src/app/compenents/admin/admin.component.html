@@ -1,0 +1,31 @@
+ 
+      
+ 
+      <app-tete [titre]="name"></app-tete>
+      <div class="site-section">
+        <div class="container">
+            <div class="col-lg-11">
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">team1</th>
+        <th scope="col">team2</th>
+        <th scope="col">score1</th>
+        <th scope="col" >score2</th>
+        <th scope="col">  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of matches">
+        <td >{{t.id}}</td>
+        <td>{{t.t1}}</td>
+        <td>{{t.t2}}</td>
+        <td>{{t.s1}}</td>
+        <td>{{t.s2}}</td>
+       <td><button class="btn btn-danger" (click)="ondelete(t.id)">delete</button></td> 
+      </tr>
+      
+    </tbody>
+  </table>
+            </div></div></div>
